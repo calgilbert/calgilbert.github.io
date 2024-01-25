@@ -1,1 +1,0 @@
-# calgilbert.github.io
