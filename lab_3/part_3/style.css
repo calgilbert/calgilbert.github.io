@@ -84,8 +84,15 @@ h2 {
 }
 
 p {
-	letter-spacing:0.1em;
+	letter-spacing:0.08em;
 	word-spacing:0.1em;
+	font-size: 1em;
+	line-height: 1.4rem;
+}
+a[href^="http"] {
+	background: url('external-link-52.png') no-repeat 100% 0;
+	background-size: 1rem;
+	padding-right: 13px;
 }
 
 section h2 + p {
@@ -100,6 +107,39 @@ a:link, a:visited, a:focus, a:hover {
 	color: #a66;
 }
 
+a:focus {
+	outline: 0;
+}
 a:focus, a:hover {
 	text-decoration: none;
+}
+
+a:active {
+	text-shadow: 0px 0px 1px black;
+}
+
+p, li {
+	margin-bottom: 1.2rem;
+	margin-top: 1.2rem;
+}
+
+section li {
+	line-height: 1em;
+}
+
+section ul li {
+	list-style-type: square;
+}
+
+aside ul li {
+	list-style-type: square;
+	line-height: 1em;
+}
+
+section ol li {
+	list-style-type: lower-roman;
+}
+
+nav ul {
+	list-style: none;
 }
