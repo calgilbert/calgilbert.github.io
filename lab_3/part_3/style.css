@@ -72,11 +72,34 @@ font-family: 'aliceregular';
 }
 h1, h2 {
 font-family: 'arvoregular';
+letter-spacing: 1px;
 }
 
 h1 {
-	font-size: 5rem;
+	font-size: 5em;
+	text-align: center;
 }
 h2 {
-	font-size: 3rem;
+	font-size: 3em;
+}
+
+p {
+	letter-spacing:0.1em;
+	word-spacing:0.1em;
+}
+
+section h2 + p {
+	text-indent: 20px;
+}
+
+a {
+	outline: none;
+}
+
+a:link, a:visited, a:focus, a:hover {
+	color: #a66;
+}
+
+a:focus, a:hover {
+	text-decoration: none;
 }
