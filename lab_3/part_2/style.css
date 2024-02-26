@@ -9,16 +9,19 @@ html {
 }
 .box {
 	width: 200px;
-	height: 200px;
+	height: 175px;
 	text-align: center;
 	vertical-align: middle;
-	line-height: 200px;
+	line-height: 175px;
 	color: yellow;
-	
+	text-shadow: 1px 1px 1px black;
 	font-size: 1.125rem;
-	border: solid 1px #56144D;
-	background-color: #871F78;
+	border: solid 1px #800080;
+	background-color: #9400D3;
 	border-radius: 15px;
 	margin: auto;
+	background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0) 30%,
+					rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+	box-shadow: 2px 2px 8px black, inset 1px 1px 5px white, inset -1px -1px 5px black;
 }
 /* Your CSS below here */
