@@ -52,7 +52,7 @@ body {
     text-decoration: none;
     padding: .5em 1em;
   }
-  
+  /* Use grid-template-columns to create an appropriate space for the images to display. */
   .photos {
     list-style: none;
     margin: 0;
