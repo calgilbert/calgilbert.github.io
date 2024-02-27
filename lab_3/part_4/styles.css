@@ -27,6 +27,7 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     max-width: 980px;
+	display: flex;
   }
   
   /* Make the nav bar sticky. Limit movement on screen to make it adhere to the top of the screen.*/
@@ -37,13 +38,13 @@ body {
 	top: 0;
   }
   
-  /* Added display: flex, justify-content: space-evenly*/
+  /* Added display: flex, justify-content. I prefer space-evenly, but space-between matches the example more closely*/
   nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
   }
   
   nav a {
@@ -56,6 +57,9 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1px;
   }
 
   .feature {
