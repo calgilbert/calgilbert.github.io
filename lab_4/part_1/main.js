@@ -33,11 +33,14 @@ const insertZ = ["spontaneously combusted",
 randomize.addEventListener('click', result);
 
 function result() {
-  let newStory = storyText;
+  const newStory = storyText;
   const xItem = randomValueFromArray(insertX);
   const yItem = randomValueFromArray(insertY);
   const zItem = randomValueFromArray(insertZ);
-  newStory = newStory.replaceAll(":insertx:", xItem).replace(":inserty:", yItem).replace(""insertz:", zItem);
+  const newStory = newStory.replace(":insertx:", xItem)
+  .replace(":insertx:", xItem)
+  .replace(":inserty:", yItem)
+  .replace(""insertz:", zItem);
   
   
   if(customName.value !== '') {
@@ -47,11 +50,13 @@ function result() {
   }
 
   if(document.getElementById("uk").checked) {
-    const weight = Math.round(300 / 14);
-    const temperature =  Math.round((94-32)*(5/9));
+    const weight = Math.round(300 / 14) + ' stone';
+    const temperature =  Math.round((94-32)*(5/9)) + ' centigrade';
+	newStory = newStory.replace('300 pounds', weight)
+						.replace('94 fahrenheit', temperature);
 
   }
 
-  story.textContent = ;
+  story.textContent = newStory;
   story.style.visibility = 'visible';
 }
