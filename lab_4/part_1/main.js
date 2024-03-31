@@ -5,9 +5,9 @@ Date: 29 March 2024
 Assignment 4: Part 1: Silly Story Generator
 */
 
-var customName = document.getElementById('customname');
-var randomize = document.querySelector('.randomize');
-var story = document.querySelector('.story');
+var customName = document.getElementById("customname");
+var randomize = document.querySelector(".randomize");
+var story = document.querySelector(".story");
 
 function randomValueFromArray(array){
   const random = Math.floor(Math.random()*array.length);
@@ -22,34 +22,32 @@ var insertY = ["the soup kitchen", "Disneyland", "the White House"];
 
 var insertZ = ["spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and crawled away"];
 
-randomize.addEventListener('click', result);
+randomize.addEventListener("click", result);
 
 function result() {
   var newStory = storyText;
   var xItem = randomValueFromArray(insertX);
   var yItem = randomValueFromArray(insertY);
   var zItem = randomValueFromArray(insertZ);
-  var newStory = newStory.replace(':insertx:', xItem)
-                          .replace(':insertx:', xItem)
-                          .replace(':inserty:', yItem)
-                          .replace(':insertz:', zItem);
+  var newStory = newStory.replace(":insertx:", xItem);
+  var newStory = newStory.replace(":inserty:", yItem);
+  var newStory = newStory.replace(":insertz:", zItem);
   
   
   if(customName.value !== '') {
     var name = customName.value;
-	  newStory = newStory.replace('Bob', name);
+	  newStory = newStory.replace("Bob", name);
 
   }
 
-  if(document.getElementById('uk').checked) {
-    const weight = Math.round(300 / 14) + ' stone';
-    const temperature =  Math.round((94-32)*(5/9)) + ' centigrade';
-	  var newStory = newStory.replace('300 pounds', weight)
-						.replace('94 fahrenheit', temperature);
+  if(document.getElementById("uk").checked) {
+    const weight = Math.round(300 / 14) + " stone";
+    const temperature =  Math.round((94-32)*(5/9)) + " centigrade";
+	  var newStory = newStory.replace("300 pounds", weight)
+						.replace("94 fahrenheit", temperature);
 
   }
 
   story.textContent = newStory;
   story.style.visibility = 'visible';
-  
 }
