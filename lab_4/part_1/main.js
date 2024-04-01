@@ -5,22 +5,22 @@ Date: 29 March 2024
 Assignment 4: Part 1: Silly Story Generator
 */
 
-var customName = document.getElementById("customname");
-var randomize = document.querySelector(".randomize");
-var story = document.querySelector(".story");
+const customName = document.getElementById("customname");
+const randomize = document.querySelector(".randomize");
+const story = document.querySelector(".story");
 
 function randomValueFromArray(array){
   const random = Math.floor(Math.random()*array.length);
   return array[random];
 }
 
-var storyText = "It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised - :insertx: weighs 300 pounds, and it was a hot day.";
+const storyText = "It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised - :insertx: weighs 300 pounds, and it was a hot day.";
 
-var insertX = ["Willy the Goblin", "Big Daddy", "Father Christmas"];
+const insertX = ["Willy the Goblin", "Big Daddy", "Father Christmas"];
 
-var insertY = ["the soup kitchen", "Disneyland", "the White House"];
+const insertY = ["the soup kitchen", "Disneyland", "the White House"];
 
-var insertZ = ["spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and crawled away"];
+const insertZ = ["spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and crawled away"];
 
 randomize.addEventListener("click", result);
 
@@ -29,9 +29,9 @@ function result() {
   var xItem = randomValueFromArray(insertX);
   var yItem = randomValueFromArray(insertY);
   var zItem = randomValueFromArray(insertZ);
-  var newStory = newStory.replace(":insertx:", xItem);
-  var newStory = newStory.replace(":inserty:", yItem);
-  var newStory = newStory.replace(":insertz:", zItem);
+  var newStory = newStory.replaceAll(":insertx:", xItem)
+                         .replace(":inserty:", yItem)
+                         .replace(":insertz:", zItem);
   
   
   if(customName.value !== '') {
