@@ -24,11 +24,12 @@ const alttext = {
 for (const image of images) {
     const newImage = document.createElement('img');
     newImage.setAttribute('src', `images/${image}`);
-    newImage.setAttribute('alt', alttext[image]);
+    newImage.setAttribute('alt', `alttext/${image}`);
     thumbBar.appendChild(newImage);
 
     newImage.addEventListener('click', event => {
     displayedImage.src = event.target.src;
+    displayedImage.alt = event.target.alt;
     })
 
 }
