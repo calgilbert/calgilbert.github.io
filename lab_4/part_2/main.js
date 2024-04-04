@@ -27,6 +27,10 @@ for (const image of images) {
     newImage.setAttribute('alt', alttext[image]);
     thumbBar.appendChild(newImage);
 
+    newImage.addEventListener('click', event => {
+    displayedImage.src = event.target.src;
+    })
+
 }
 
 /* Wiring up the Darken/Lighten button */
