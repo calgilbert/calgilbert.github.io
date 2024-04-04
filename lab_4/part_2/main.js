@@ -31,7 +31,14 @@ for (const image of images) {
     displayedImage.src = event.target.src;
     displayedImage.alt = event.target.alt;
     })
-
 }
 
 /* Wiring up the Darken/Lighten button */
+
+btn.addEventListener('click', change => {
+    
+    btn.setAttribute("class", xxx);
+    btn.textContent = xxx;
+    overlay.style.backgroundColor = xxx;
+
+}
