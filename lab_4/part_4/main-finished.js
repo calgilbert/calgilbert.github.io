@@ -112,19 +112,19 @@ draw() {
   
 checkBounds() {
   if (this.x + this.size >= width) {
-    this.x = this.size;
+    this.x -= this.size;
   }
 
   if (this.x - this.size <= 0) {
-    this.x = this.size;
+    this.x += this.size;
   }
 
   if (this.y + this.size >= height) {
-    this.y = this.size;
+    this.y -= this.size;
   }
 
   if (this.y - this.size <= 0) {
-    this.y = this.size;
+    this.y += this.size;
   }
 }
 
@@ -137,13 +137,19 @@ collisionDetect() {
 
       if (distance < this.size + ball.size) {
         ball.exists = false;
-        
+
 
       }}}    
 }
 }
 
 const balls = [];
+
+const playerBall = EvilCircle(random(width), random(height));
+
+playerBall.draw();
+playerBall.checkBounds();
+playerBall.collisionDetect();
 
 while (balls.length < 25) {
   const size = random(10, 20);
@@ -166,10 +172,14 @@ function loop() {
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {
+    if (ball.exists) {
     ball.draw();
     ball.update();
     ball.collisionDetect();
   }
+}
+
+
 
   requestAnimationFrame(loop);
 }
