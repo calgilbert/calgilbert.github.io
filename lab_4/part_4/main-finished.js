@@ -1,3 +1,9 @@
+/*
+Name: Calvin Gilbert
+File: index.html
+Date: 04 April 2024
+Assignment 4: Part 4: Editing Ball Bounce Demo to Add More Features
+*/
 // set up canvas
 
 const canvas = document.querySelector("canvas");
