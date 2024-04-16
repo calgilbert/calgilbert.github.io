@@ -71,6 +71,7 @@ class Ball {
   }
 }
 
+
 class EvilCircle extends Shape {
   constructor(x, y) {
     super(x, y, 20, 20);
