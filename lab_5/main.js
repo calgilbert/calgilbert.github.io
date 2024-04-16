@@ -1,3 +1,9 @@
+/*
+Name: Calvin Gilbert
+File: main.js
+Date: 16 April 2024
+Assignment 5: Web Accessibility
+*/
 // functionality for showing/hiding the comments section
 
 const showHideBtn = document.querySelector('.show-hide');
