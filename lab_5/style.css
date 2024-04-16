@@ -254,3 +254,15 @@ audio {
 .comment-container li p:nth-child(2) {
   flex: 5;
 }
+
+audio {
+  margin: 0;
+}
+.transcript {
+  margin-left: 2rem;
+  display: none;
+}
+
+.transcript-control {
+  margin-left: 3rem;
+}
